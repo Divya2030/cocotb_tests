@@ -1,0 +1,10 @@
+<top abs_name="top" cover_percentage="100.0" coverage="2" size="2">
+  <adder_model abs_name="top.adder_model" cover_percentage="100.0" coverage="2" size="2">
+    <a abs_name="top.adder_model.a" at_least="1" cover_percentage="100.0" coverage="1" size="1" weight="1">
+      <bin0 abs_name="top.adder_model.a.bin0" bin="5" hits="1" />
+    </a>
+    <b abs_name="top.adder_model.b" at_least="1" cover_percentage="100.0" coverage="1" size="1" weight="1">
+      <bin0 abs_name="top.adder_model.b.bin0" bin="10" hits="1" />
+    </b>
+  </adder_model>
+</top>

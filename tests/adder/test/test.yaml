@@ -1,9 +1,0 @@
-toplevel: fulladd
-verilog_sources: 
-  - /home/divya/cocotb_tests/tests/adder/hdl/adder.v
-test_path: 
-  /home/divya/cocotb_tests/tests/adder/test
-model_path: 
-  /home/divya/cocotb_tests/tests/adder/test
-tests:
-  - test 

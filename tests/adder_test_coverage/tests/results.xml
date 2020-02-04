@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all" tests="0">
+    <property name="random_seed" value="1580839348" />
+    <testcase classname="test_adder" name="adder_basic_test" ratio_time="522.8993956314462" sim_time_ns="4.001" time="0.007651567459106445" />
+    <testcase classname="test_adder" name="adder_randomised_test" ratio_time="5643.968336636085" sim_time_ns="22.000999999999998" time="0.003898143768310547" />
+  </testsuite>
+</testsuites>
