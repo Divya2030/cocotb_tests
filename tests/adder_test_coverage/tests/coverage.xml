@@ -1,10 +1,263 @@
-<top abs_name="top" cover_percentage="100.0" coverage="2" size="2">
-  <adder_model abs_name="top.adder_model" cover_percentage="100.0" coverage="2" size="2">
-    <a abs_name="top.adder_model.a" at_least="1" cover_percentage="100.0" coverage="1" size="1" weight="1">
-      <bin0 abs_name="top.adder_model.a.bin0" bin="5" hits="1" />
-    </a>
-    <b abs_name="top.adder_model.b" at_least="1" cover_percentage="100.0" coverage="1" size="1" weight="1">
-      <bin0 abs_name="top.adder_model.b.bin0" bin="10" hits="1" />
-    </b>
-  </adder_model>
+<top abs_name="top" cover_percentage="100.0" coverage="255" size="255">
+  <a abs_name="top.a" at_least="1" cover_percentage="100.0" coverage="15" size="15" weight="1">
+    <bin0 abs_name="top.a.bin0" bin="0" hits="57" />
+    <bin1 abs_name="top.a.bin1" bin="1" hits="72" />
+    <bin2 abs_name="top.a.bin2" bin="2" hits="62" />
+    <bin3 abs_name="top.a.bin3" bin="3" hits="73" />
+    <bin4 abs_name="top.a.bin4" bin="4" hits="57" />
+    <bin5 abs_name="top.a.bin5" bin="5" hits="72" />
+    <bin6 abs_name="top.a.bin6" bin="6" hits="66" />
+    <bin7 abs_name="top.a.bin7" bin="7" hits="79" />
+    <bin8 abs_name="top.a.bin8" bin="8" hits="62" />
+    <bin9 abs_name="top.a.bin9" bin="9" hits="69" />
+    <bin10 abs_name="top.a.bin10" bin="10" hits="68" />
+    <bin11 abs_name="top.a.bin11" bin="11" hits="68" />
+    <bin12 abs_name="top.a.bin12" bin="12" hits="65" />
+    <bin13 abs_name="top.a.bin13" bin="13" hits="72" />
+    <bin14 abs_name="top.a.bin14" bin="14" hits="58" />
+  </a>
+  <b abs_name="top.b" at_least="1" cover_percentage="100.0" coverage="15" size="15" weight="1">
+    <bin0 abs_name="top.b.bin0" bin="0" hits="64" />
+    <bin1 abs_name="top.b.bin1" bin="1" hits="65" />
+    <bin2 abs_name="top.b.bin2" bin="2" hits="63" />
+    <bin3 abs_name="top.b.bin3" bin="3" hits="54" />
+    <bin4 abs_name="top.b.bin4" bin="4" hits="72" />
+    <bin5 abs_name="top.b.bin5" bin="5" hits="73" />
+    <bin6 abs_name="top.b.bin6" bin="6" hits="73" />
+    <bin7 abs_name="top.b.bin7" bin="7" hits="51" />
+    <bin8 abs_name="top.b.bin8" bin="8" hits="67" />
+    <bin9 abs_name="top.b.bin9" bin="9" hits="81" />
+    <bin10 abs_name="top.b.bin10" bin="10" hits="59" />
+    <bin11 abs_name="top.b.bin11" bin="11" hits="64" />
+    <bin12 abs_name="top.b.bin12" bin="12" hits="62" />
+    <bin13 abs_name="top.b.bin13" bin="13" hits="74" />
+    <bin14 abs_name="top.b.bin14" bin="14" hits="78" />
+  </b>
+  <adder_result abs_name="top.adder_result" at_least="1" cover_percentage="100.0" coverage="225" size="225" weight="1">
+    <bin0 abs_name="top.adder_result.bin0" bin="(0, 0)" hits="4" />
+    <bin1 abs_name="top.adder_result.bin1" bin="(0, 1)" hits="5" />
+    <bin2 abs_name="top.adder_result.bin2" bin="(0, 2)" hits="3" />
+    <bin3 abs_name="top.adder_result.bin3" bin="(0, 3)" hits="2" />
+    <bin4 abs_name="top.adder_result.bin4" bin="(0, 4)" hits="7" />
+    <bin5 abs_name="top.adder_result.bin5" bin="(0, 5)" hits="3" />
+    <bin6 abs_name="top.adder_result.bin6" bin="(0, 6)" hits="6" />
+    <bin7 abs_name="top.adder_result.bin7" bin="(0, 7)" hits="3" />
+    <bin8 abs_name="top.adder_result.bin8" bin="(0, 8)" hits="3" />
+    <bin9 abs_name="top.adder_result.bin9" bin="(0, 9)" hits="5" />
+    <bin10 abs_name="top.adder_result.bin10" bin="(0, 10)" hits="1" />
+    <bin11 abs_name="top.adder_result.bin11" bin="(0, 11)" hits="6" />
+    <bin12 abs_name="top.adder_result.bin12" bin="(0, 12)" hits="4" />
+    <bin13 abs_name="top.adder_result.bin13" bin="(0, 13)" hits="2" />
+    <bin14 abs_name="top.adder_result.bin14" bin="(0, 14)" hits="3" />
+    <bin15 abs_name="top.adder_result.bin15" bin="(1, 0)" hits="5" />
+    <bin16 abs_name="top.adder_result.bin16" bin="(1, 1)" hits="3" />
+    <bin17 abs_name="top.adder_result.bin17" bin="(1, 2)" hits="6" />
+    <bin18 abs_name="top.adder_result.bin18" bin="(1, 3)" hits="8" />
+    <bin19 abs_name="top.adder_result.bin19" bin="(1, 4)" hits="3" />
+    <bin20 abs_name="top.adder_result.bin20" bin="(1, 5)" hits="2" />
+    <bin21 abs_name="top.adder_result.bin21" bin="(1, 6)" hits="4" />
+    <bin22 abs_name="top.adder_result.bin22" bin="(1, 7)" hits="4" />
+    <bin23 abs_name="top.adder_result.bin23" bin="(1, 8)" hits="6" />
+    <bin24 abs_name="top.adder_result.bin24" bin="(1, 9)" hits="5" />
+    <bin25 abs_name="top.adder_result.bin25" bin="(1, 10)" hits="8" />
+    <bin26 abs_name="top.adder_result.bin26" bin="(1, 11)" hits="1" />
+    <bin27 abs_name="top.adder_result.bin27" bin="(1, 12)" hits="4" />
+    <bin28 abs_name="top.adder_result.bin28" bin="(1, 13)" hits="10" />
+    <bin29 abs_name="top.adder_result.bin29" bin="(1, 14)" hits="3" />
+    <bin30 abs_name="top.adder_result.bin30" bin="(2, 0)" hits="5" />
+    <bin31 abs_name="top.adder_result.bin31" bin="(2, 1)" hits="4" />
+    <bin32 abs_name="top.adder_result.bin32" bin="(2, 2)" hits="1" />
+    <bin33 abs_name="top.adder_result.bin33" bin="(2, 3)" hits="6" />
+    <bin34 abs_name="top.adder_result.bin34" bin="(2, 4)" hits="4" />
+    <bin35 abs_name="top.adder_result.bin35" bin="(2, 5)" hits="5" />
+    <bin36 abs_name="top.adder_result.bin36" bin="(2, 6)" hits="7" />
+    <bin37 abs_name="top.adder_result.bin37" bin="(2, 7)" hits="1" />
+    <bin38 abs_name="top.adder_result.bin38" bin="(2, 8)" hits="2" />
+    <bin39 abs_name="top.adder_result.bin39" bin="(2, 9)" hits="7" />
+    <bin40 abs_name="top.adder_result.bin40" bin="(2, 10)" hits="3" />
+    <bin41 abs_name="top.adder_result.bin41" bin="(2, 11)" hits="4" />
+    <bin42 abs_name="top.adder_result.bin42" bin="(2, 12)" hits="4" />
+    <bin43 abs_name="top.adder_result.bin43" bin="(2, 13)" hits="4" />
+    <bin44 abs_name="top.adder_result.bin44" bin="(2, 14)" hits="5" />
+    <bin45 abs_name="top.adder_result.bin45" bin="(3, 0)" hits="3" />
+    <bin46 abs_name="top.adder_result.bin46" bin="(3, 1)" hits="11" />
+    <bin47 abs_name="top.adder_result.bin47" bin="(3, 2)" hits="6" />
+    <bin48 abs_name="top.adder_result.bin48" bin="(3, 3)" hits="3" />
+    <bin49 abs_name="top.adder_result.bin49" bin="(3, 4)" hits="4" />
+    <bin50 abs_name="top.adder_result.bin50" bin="(3, 5)" hits="4" />
+    <bin51 abs_name="top.adder_result.bin51" bin="(3, 6)" hits="4" />
+    <bin52 abs_name="top.adder_result.bin52" bin="(3, 7)" hits="5" />
+    <bin53 abs_name="top.adder_result.bin53" bin="(3, 8)" hits="2" />
+    <bin54 abs_name="top.adder_result.bin54" bin="(3, 9)" hits="6" />
+    <bin55 abs_name="top.adder_result.bin55" bin="(3, 10)" hits="6" />
+    <bin56 abs_name="top.adder_result.bin56" bin="(3, 11)" hits="3" />
+    <bin57 abs_name="top.adder_result.bin57" bin="(3, 12)" hits="4" />
+    <bin58 abs_name="top.adder_result.bin58" bin="(3, 13)" hits="5" />
+    <bin59 abs_name="top.adder_result.bin59" bin="(3, 14)" hits="7" />
+    <bin60 abs_name="top.adder_result.bin60" bin="(4, 0)" hits="5" />
+    <bin61 abs_name="top.adder_result.bin61" bin="(4, 1)" hits="4" />
+    <bin62 abs_name="top.adder_result.bin62" bin="(4, 2)" hits="2" />
+    <bin63 abs_name="top.adder_result.bin63" bin="(4, 3)" hits="3" />
+    <bin64 abs_name="top.adder_result.bin64" bin="(4, 4)" hits="4" />
+    <bin65 abs_name="top.adder_result.bin65" bin="(4, 5)" hits="5" />
+    <bin66 abs_name="top.adder_result.bin66" bin="(4, 6)" hits="4" />
+    <bin67 abs_name="top.adder_result.bin67" bin="(4, 7)" hits="3" />
+    <bin68 abs_name="top.adder_result.bin68" bin="(4, 8)" hits="4" />
+    <bin69 abs_name="top.adder_result.bin69" bin="(4, 9)" hits="3" />
+    <bin70 abs_name="top.adder_result.bin70" bin="(4, 10)" hits="2" />
+    <bin71 abs_name="top.adder_result.bin71" bin="(4, 11)" hits="3" />
+    <bin72 abs_name="top.adder_result.bin72" bin="(4, 12)" hits="5" />
+    <bin73 abs_name="top.adder_result.bin73" bin="(4, 13)" hits="3" />
+    <bin74 abs_name="top.adder_result.bin74" bin="(4, 14)" hits="7" />
+    <bin75 abs_name="top.adder_result.bin75" bin="(5, 0)" hits="4" />
+    <bin76 abs_name="top.adder_result.bin76" bin="(5, 1)" hits="4" />
+    <bin77 abs_name="top.adder_result.bin77" bin="(5, 2)" hits="5" />
+    <bin78 abs_name="top.adder_result.bin78" bin="(5, 3)" hits="3" />
+    <bin79 abs_name="top.adder_result.bin79" bin="(5, 4)" hits="6" />
+    <bin80 abs_name="top.adder_result.bin80" bin="(5, 5)" hits="8" />
+    <bin81 abs_name="top.adder_result.bin81" bin="(5, 6)" hits="6" />
+    <bin82 abs_name="top.adder_result.bin82" bin="(5, 7)" hits="2" />
+    <bin83 abs_name="top.adder_result.bin83" bin="(5, 8)" hits="6" />
+    <bin84 abs_name="top.adder_result.bin84" bin="(5, 9)" hits="5" />
+    <bin85 abs_name="top.adder_result.bin85" bin="(5, 10)" hits="6" />
+    <bin86 abs_name="top.adder_result.bin86" bin="(5, 11)" hits="3" />
+    <bin87 abs_name="top.adder_result.bin87" bin="(5, 12)" hits="3" />
+    <bin88 abs_name="top.adder_result.bin88" bin="(5, 13)" hits="6" />
+    <bin89 abs_name="top.adder_result.bin89" bin="(5, 14)" hits="5" />
+    <bin90 abs_name="top.adder_result.bin90" bin="(6, 0)" hits="3" />
+    <bin91 abs_name="top.adder_result.bin91" bin="(6, 1)" hits="11" />
+    <bin92 abs_name="top.adder_result.bin92" bin="(6, 2)" hits="1" />
+    <bin93 abs_name="top.adder_result.bin93" bin="(6, 3)" hits="2" />
+    <bin94 abs_name="top.adder_result.bin94" bin="(6, 4)" hits="3" />
+    <bin95 abs_name="top.adder_result.bin95" bin="(6, 5)" hits="7" />
+    <bin96 abs_name="top.adder_result.bin96" bin="(6, 6)" hits="5" />
+    <bin97 abs_name="top.adder_result.bin97" bin="(6, 7)" hits="3" />
+    <bin98 abs_name="top.adder_result.bin98" bin="(6, 8)" hits="6" />
+    <bin99 abs_name="top.adder_result.bin99" bin="(6, 9)" hits="4" />
+    <bin100 abs_name="top.adder_result.bin100" bin="(6, 10)" hits="2" />
+    <bin101 abs_name="top.adder_result.bin101" bin="(6, 11)" hits="4" />
+    <bin102 abs_name="top.adder_result.bin102" bin="(6, 12)" hits="3" />
+    <bin103 abs_name="top.adder_result.bin103" bin="(6, 13)" hits="5" />
+    <bin104 abs_name="top.adder_result.bin104" bin="(6, 14)" hits="7" />
+    <bin105 abs_name="top.adder_result.bin105" bin="(7, 0)" hits="6" />
+    <bin106 abs_name="top.adder_result.bin106" bin="(7, 1)" hits="3" />
+    <bin107 abs_name="top.adder_result.bin107" bin="(7, 2)" hits="4" />
+    <bin108 abs_name="top.adder_result.bin108" bin="(7, 3)" hits="3" />
+    <bin109 abs_name="top.adder_result.bin109" bin="(7, 4)" hits="4" />
+    <bin110 abs_name="top.adder_result.bin110" bin="(7, 5)" hits="5" />
+    <bin111 abs_name="top.adder_result.bin111" bin="(7, 6)" hits="7" />
+    <bin112 abs_name="top.adder_result.bin112" bin="(7, 7)" hits="3" />
+    <bin113 abs_name="top.adder_result.bin113" bin="(7, 8)" hits="4" />
+    <bin114 abs_name="top.adder_result.bin114" bin="(7, 9)" hits="11" />
+    <bin115 abs_name="top.adder_result.bin115" bin="(7, 10)" hits="6" />
+    <bin116 abs_name="top.adder_result.bin116" bin="(7, 11)" hits="5" />
+    <bin117 abs_name="top.adder_result.bin117" bin="(7, 12)" hits="6" />
+    <bin118 abs_name="top.adder_result.bin118" bin="(7, 13)" hits="4" />
+    <bin119 abs_name="top.adder_result.bin119" bin="(7, 14)" hits="8" />
+    <bin120 abs_name="top.adder_result.bin120" bin="(8, 0)" hits="5" />
+    <bin121 abs_name="top.adder_result.bin121" bin="(8, 1)" hits="4" />
+    <bin122 abs_name="top.adder_result.bin122" bin="(8, 2)" hits="5" />
+    <bin123 abs_name="top.adder_result.bin123" bin="(8, 3)" hits="4" />
+    <bin124 abs_name="top.adder_result.bin124" bin="(8, 4)" hits="7" />
+    <bin125 abs_name="top.adder_result.bin125" bin="(8, 5)" hits="2" />
+    <bin126 abs_name="top.adder_result.bin126" bin="(8, 6)" hits="4" />
+    <bin127 abs_name="top.adder_result.bin127" bin="(8, 7)" hits="5" />
+    <bin128 abs_name="top.adder_result.bin128" bin="(8, 8)" hits="3" />
+    <bin129 abs_name="top.adder_result.bin129" bin="(8, 9)" hits="3" />
+    <bin130 abs_name="top.adder_result.bin130" bin="(8, 10)" hits="3" />
+    <bin131 abs_name="top.adder_result.bin131" bin="(8, 11)" hits="8" />
+    <bin132 abs_name="top.adder_result.bin132" bin="(8, 12)" hits="3" />
+    <bin133 abs_name="top.adder_result.bin133" bin="(8, 13)" hits="5" />
+    <bin134 abs_name="top.adder_result.bin134" bin="(8, 14)" hits="1" />
+    <bin135 abs_name="top.adder_result.bin135" bin="(9, 0)" hits="2" />
+    <bin136 abs_name="top.adder_result.bin136" bin="(9, 1)" hits="3" />
+    <bin137 abs_name="top.adder_result.bin137" bin="(9, 2)" hits="4" />
+    <bin138 abs_name="top.adder_result.bin138" bin="(9, 3)" hits="2" />
+    <bin139 abs_name="top.adder_result.bin139" bin="(9, 4)" hits="2" />
+    <bin140 abs_name="top.adder_result.bin140" bin="(9, 5)" hits="5" />
+    <bin141 abs_name="top.adder_result.bin141" bin="(9, 6)" hits="3" />
+    <bin142 abs_name="top.adder_result.bin142" bin="(9, 7)" hits="4" />
+    <bin143 abs_name="top.adder_result.bin143" bin="(9, 8)" hits="6" />
+    <bin144 abs_name="top.adder_result.bin144" bin="(9, 9)" hits="10" />
+    <bin145 abs_name="top.adder_result.bin145" bin="(9, 10)" hits="3" />
+    <bin146 abs_name="top.adder_result.bin146" bin="(9, 11)" hits="5" />
+    <bin147 abs_name="top.adder_result.bin147" bin="(9, 12)" hits="6" />
+    <bin148 abs_name="top.adder_result.bin148" bin="(9, 13)" hits="6" />
+    <bin149 abs_name="top.adder_result.bin149" bin="(9, 14)" hits="8" />
+    <bin150 abs_name="top.adder_result.bin150" bin="(10, 0)" hits="1" />
+    <bin151 abs_name="top.adder_result.bin151" bin="(10, 1)" hits="1" />
+    <bin152 abs_name="top.adder_result.bin152" bin="(10, 2)" hits="5" />
+    <bin153 abs_name="top.adder_result.bin153" bin="(10, 3)" hits="3" />
+    <bin154 abs_name="top.adder_result.bin154" bin="(10, 4)" hits="7" />
+    <bin155 abs_name="top.adder_result.bin155" bin="(10, 5)" hits="4" />
+    <bin156 abs_name="top.adder_result.bin156" bin="(10, 6)" hits="6" />
+    <bin157 abs_name="top.adder_result.bin157" bin="(10, 7)" hits="5" />
+    <bin158 abs_name="top.adder_result.bin158" bin="(10, 8)" hits="5" />
+    <bin159 abs_name="top.adder_result.bin159" bin="(10, 9)" hits="7" />
+    <bin160 abs_name="top.adder_result.bin160" bin="(10, 10)" hits="5" />
+    <bin161 abs_name="top.adder_result.bin161" bin="(10, 11)" hits="5" />
+    <bin162 abs_name="top.adder_result.bin162" bin="(10, 12)" hits="4" />
+    <bin163 abs_name="top.adder_result.bin163" bin="(10, 13)" hits="6" />
+    <bin164 abs_name="top.adder_result.bin164" bin="(10, 14)" hits="4" />
+    <bin165 abs_name="top.adder_result.bin165" bin="(11, 0)" hits="3" />
+    <bin166 abs_name="top.adder_result.bin166" bin="(11, 1)" hits="2" />
+    <bin167 abs_name="top.adder_result.bin167" bin="(11, 2)" hits="5" />
+    <bin168 abs_name="top.adder_result.bin168" bin="(11, 3)" hits="3" />
+    <bin169 abs_name="top.adder_result.bin169" bin="(11, 4)" hits="4" />
+    <bin170 abs_name="top.adder_result.bin170" bin="(11, 5)" hits="7" />
+    <bin171 abs_name="top.adder_result.bin171" bin="(11, 6)" hits="6" />
+    <bin172 abs_name="top.adder_result.bin172" bin="(11, 7)" hits="3" />
+    <bin173 abs_name="top.adder_result.bin173" bin="(11, 8)" hits="8" />
+    <bin174 abs_name="top.adder_result.bin174" bin="(11, 9)" hits="4" />
+    <bin175 abs_name="top.adder_result.bin175" bin="(11, 10)" hits="3" />
+    <bin176 abs_name="top.adder_result.bin176" bin="(11, 11)" hits="5" />
+    <bin177 abs_name="top.adder_result.bin177" bin="(11, 12)" hits="4" />
+    <bin178 abs_name="top.adder_result.bin178" bin="(11, 13)" hits="4" />
+    <bin179 abs_name="top.adder_result.bin179" bin="(11, 14)" hits="7" />
+    <bin180 abs_name="top.adder_result.bin180" bin="(12, 0)" hits="5" />
+    <bin181 abs_name="top.adder_result.bin181" bin="(12, 1)" hits="2" />
+    <bin182 abs_name="top.adder_result.bin182" bin="(12, 2)" hits="7" />
+    <bin183 abs_name="top.adder_result.bin183" bin="(12, 3)" hits="5" />
+    <bin184 abs_name="top.adder_result.bin184" bin="(12, 4)" hits="5" />
+    <bin185 abs_name="top.adder_result.bin185" bin="(12, 5)" hits="3" />
+    <bin186 abs_name="top.adder_result.bin186" bin="(12, 6)" hits="3" />
+    <bin187 abs_name="top.adder_result.bin187" bin="(12, 7)" hits="4" />
+    <bin188 abs_name="top.adder_result.bin188" bin="(12, 8)" hits="6" />
+    <bin189 abs_name="top.adder_result.bin189" bin="(12, 9)" hits="1" />
+    <bin190 abs_name="top.adder_result.bin190" bin="(12, 10)" hits="4" />
+    <bin191 abs_name="top.adder_result.bin191" bin="(12, 11)" hits="5" />
+    <bin192 abs_name="top.adder_result.bin192" bin="(12, 12)" hits="6" />
+    <bin193 abs_name="top.adder_result.bin193" bin="(12, 13)" hits="7" />
+    <bin194 abs_name="top.adder_result.bin194" bin="(12, 14)" hits="2" />
+    <bin195 abs_name="top.adder_result.bin195" bin="(13, 0)" hits="5" />
+    <bin196 abs_name="top.adder_result.bin196" bin="(13, 1)" hits="4" />
+    <bin197 abs_name="top.adder_result.bin197" bin="(13, 2)" hits="7" />
+    <bin198 abs_name="top.adder_result.bin198" bin="(13, 3)" hits="4" />
+    <bin199 abs_name="top.adder_result.bin199" bin="(13, 4)" hits="10" />
+    <bin200 abs_name="top.adder_result.bin200" bin="(13, 5)" hits="8" />
+    <bin201 abs_name="top.adder_result.bin201" bin="(13, 6)" hits="4" />
+    <bin202 abs_name="top.adder_result.bin202" bin="(13, 7)" hits="3" />
+    <bin203 abs_name="top.adder_result.bin203" bin="(13, 8)" hits="1" />
+    <bin204 abs_name="top.adder_result.bin204" bin="(13, 9)" hits="6" />
+    <bin205 abs_name="top.adder_result.bin205" bin="(13, 10)" hits="1" />
+    <bin206 abs_name="top.adder_result.bin206" bin="(13, 11)" hits="5" />
+    <bin207 abs_name="top.adder_result.bin207" bin="(13, 12)" hits="5" />
+    <bin208 abs_name="top.adder_result.bin208" bin="(13, 13)" hits="3" />
+    <bin209 abs_name="top.adder_result.bin209" bin="(13, 14)" hits="6" />
+    <bin210 abs_name="top.adder_result.bin210" bin="(14, 0)" hits="8" />
+    <bin211 abs_name="top.adder_result.bin211" bin="(14, 1)" hits="4" />
+    <bin212 abs_name="top.adder_result.bin212" bin="(14, 2)" hits="2" />
+    <bin213 abs_name="top.adder_result.bin213" bin="(14, 3)" hits="3" />
+    <bin214 abs_name="top.adder_result.bin214" bin="(14, 4)" hits="2" />
+    <bin215 abs_name="top.adder_result.bin215" bin="(14, 5)" hits="5" />
+    <bin216 abs_name="top.adder_result.bin216" bin="(14, 6)" hits="4" />
+    <bin217 abs_name="top.adder_result.bin217" bin="(14, 7)" hits="3" />
+    <bin218 abs_name="top.adder_result.bin218" bin="(14, 8)" hits="5" />
+    <bin219 abs_name="top.adder_result.bin219" bin="(14, 9)" hits="4" />
+    <bin220 abs_name="top.adder_result.bin220" bin="(14, 10)" hits="6" />
+    <bin221 abs_name="top.adder_result.bin221" bin="(14, 11)" hits="2" />
+    <bin222 abs_name="top.adder_result.bin222" bin="(14, 12)" hits="1" />
+    <bin223 abs_name="top.adder_result.bin223" bin="(14, 13)" hits="4" />
+    <bin224 abs_name="top.adder_result.bin224" bin="(14, 14)" hits="5" />
+  </adder_result>
 </top>

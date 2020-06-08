@@ -10,24 +10,6 @@ import logging as log
 
 
 @cocotb.test()
-def adder_basic_test(dut):
-    """Test for 5 + 10"""
-    yield Timer(2, units='ns')
-    A = 5
-    B = 10
-
-    dut.A = A
-    dut.B = B
-
-    yield Timer(2, units='ns')
-
-    if int(dut.X) != adder_model(A, B):
-        raise TestFailure(
-            "Adder result is incorrect: %s != 15" % str(dut.X))
-    else:  # these last two lines are not strictly necessary
-        dut._log.info("Ok!")
-
-@cocotb.test()
 def adder_randomised_test(dut):
         """Test for adding 2 random numbers multiple times"""
         class SimpleRandomized(crv.Randomized):
@@ -45,8 +27,7 @@ def adder_randomised_test(dut):
                    #defining constraint for  instructions
                    self.add_constraint(c1)  
                    self.add_constraint(c2)  
-        c=0 
-        for i in range(16):
+        for i in range(1000):
               # create randomized object instance
               x = SimpleRandomized(0,0)
               # randomize object with additional contraint
@@ -57,7 +38,6 @@ def adder_randomised_test(dut):
               B = x.B  
               dut.A = A
               dut.B = B 
-              c=c+1
 
               yield Timer(20, units='ns')
 
