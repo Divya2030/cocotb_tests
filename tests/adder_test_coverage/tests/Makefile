@@ -31,18 +31,12 @@ TOPLEVEL_LANG ?= verilog
 
 PWD=$(shell pwd)
 
-ifeq ($(OS),Msys)
-WPWD=$(shell sh -c 'pwd -W')
-PYTHONPATH := $(WPWD)/../model;$(PYTHONPATH)
-else
-WPWD=$(shell pwd)
-PYTHONPATH := $(WPWD)/../model:$(PYTHONPATH)
-endif
+export PYTHONPATH := $(PWD)/../model:$(PYTHONPATH)
 
 ifeq ($(TOPLEVEL_LANG),verilog)
-    VERILOG_SOURCES = $(WPWD)/../hdl/adder.v
+    VERILOG_SOURCES = $(PWD)/../hdl/adder.sv
 else ifeq ($(TOPLEVEL_LANG),vhdl)
-    VHDL_SOURCES = $(WPWD)/../hdl/adder.vhdl
+    VHDL_SOURCES = $(PWD)/../hdl/adder.vhdl
 else
     $(error "A valid value (verilog or vhdl) was not provided for TOPLEVEL_LANG=$(TOPLEVEL_LANG)")
 endif
@@ -50,5 +44,5 @@ endif
 TOPLEVEL := adder
 MODULE   := test_adder
 
-include /home/divya/cocotb/makefiles/Makefile.inc
-include /home/divya/cocotb/makefiles/Makefile.sim
+include $(shell cocotb-config --makefiles)/Makefile.sim
+
