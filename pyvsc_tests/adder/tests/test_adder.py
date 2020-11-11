@@ -54,11 +54,11 @@ async def adder_randomised_test(dut):
 
                  self.cp1 = coverpoint(a,
                      bins=dict(
-                         a = bin_array([], 1)
+                         a = bin_array([], [1,15])
                      ))
 
                  self.cp2 = coverpoint(b, bins=dict(
-                     b = bin_array([], 1)
+                     b = bin_array([], [1,15])
                      ))
 
 
