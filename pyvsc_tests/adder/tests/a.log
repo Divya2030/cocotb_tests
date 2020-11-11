@@ -1,0 +1,50 @@
+make results.xml
+make[1]: Entering directory '/home/divya/Downloads/cocotb-master/examples/adder/tests'
+MODULE=test_adder TESTCASE= TOPLEVEL=adder TOPLEVEL_LANG=verilog \
+        sim_build/adder 
+     -.--ns INFO     cocotb.gpi                         ..mbed/gpi_embed.cpp:97   in set_program_name_in_venv        Using Python virtual environment interpreter at /home/divya/.pyenv/versions/3.7.0/envs/py36/bin/python
+     -.--ns INFO     cocotb.gpi                         ../gpi/GpiCommon.cpp:105  in gpi_print_registered_impl       VPI registered
+     -.--ns INFO     cocotb.gpi                         ..mbed/gpi_embed.cpp:244  in embed_sim_init                  Python interpreter initialized and cocotb loaded!
+     0.00ns INFO     cocotb                                      __init__.py:202  in _initialise_testbench           Running on Verilator version 4.038 2020-07-11
+     0.00ns INFO     cocotb                                      __init__.py:209  in _initialise_testbench           Running tests with cocotb v1.4.0 from /home/divya/.pyenv/versions/3.7.0/envs/py36/lib/python3.7/site-packages/cocotb
+     0.00ns INFO     cocotb                                      __init__.py:229  in _initialise_testbench           Seeding Python random module with 1605104756
+     0.00ns INFO     cocotb.regression                         regression.py:127  in __init__                        Found test test_adder.adder_basic_test
+     0.00ns INFO     cocotb.regression                         regression.py:127  in __init__                        Found test test_adder.adder_randomised_test
+     0.00ns INFO     cocotb.regression                         regression.py:463  in _start_test                     Running test 1/2: adder_basic_test
+     0.00ns INFO     ..t.adder_basic_test.0x7f82e1ad0dd8       decorators.py:256  in _advance                        Starting test: "adder_basic_test"
+                                                                                                                     Description: Test for 5 + 10
+     2.00ns INFO     cocotb.regression                         regression.py:361  in _score_test                     Test Passed: adder_basic_test
+     2.00ns INFO     cocotb.regression                         regression.py:463  in _start_test                     Running test 2/2: adder_randomised_test
+     2.00ns INFO     ..er_randomised_test.0x7f82e12000f0       decorators.py:256  in _advance                        Starting test: "adder_randomised_test"
+                                                                                                                     Description: Test for adding 2 random numbers multiple times
+     4.00ns ERROR    cocotb.regression                         regression.py:396  in _score_test                     Test Failed: adder_randomised_test (result was TypeError)
+                                                                                                                     Traceback (most recent call last):
+                                                                                                                       File "/home/divya/Downloads/cocotb-master/examples/adder/tests/test_adder.py", line 68, in adder_randomised_test
+                                                                                                                         cg = my_covergroup(lambda:a, lambda:b)
+                                                                                                                       File "/home/divya/.pyenv/versions/3.7.0/envs/py36/lib/python3.7/site-packages/vsc/coverage.py", line 260, in __init__
+                                                                                                                         self.build_model()
+                                                                                                                       File "/home/divya/.pyenv/versions/3.7.0/envs/py36/lib/python3.7/site-packages/vsc/coverage.py", line 161, in build_model
+                                                                                                                         cp_m = b.build_cov_model(cg_i.model, obj_name_m[b])
+                                                                                                                       File "/home/divya/.pyenv/versions/3.7.0/envs/py36/lib/python3.7/site-packages/vsc/coverage.py", line 477, in build_cov_model
+                                                                                                                         bin_m = bin_spec.build_cov_model(self.model, bin_name)
+                                                                                                                       File "/home/divya/.pyenv/versions/3.7.0/envs/py36/lib/python3.7/site-packages/vsc/coverage.py", line 316, in build_cov_model
+                                                                                                                         ret = CoverpointBinArrayModel(name, r[0], r[1])
+                                                                                                                     TypeError: 'int' object is not subscriptable
+     4.00ns ERROR    cocotb.regression                         regression.py:476  in _log_test_summary               Failed 1 out of 2 tests (0 skipped)
+     4.00ns INFO     cocotb.regression                         regression.py:548  in _log_test_summary               ******************************************************************************************
+                                                                                                                     ** TEST                              PASS/FAIL  SIM TIME(NS)  REAL TIME(S)  RATIO(NS/S) **
+                                                                                                                     ******************************************************************************************
+                                                                                                                     ** test_adder.adder_basic_test         PASS            2.00          0.00      2314.62  **
+                                                                                                                     ** test_adder.adder_randomised_test    FAIL            2.00          0.02        80.91  **
+                                                                                                                     ******************************************************************************************
+                                                                                                                     
+     4.00ns INFO     cocotb.regression                         regression.py:565  in _log_sim_summary                *************************************************************************************
+                                                                                                                     **                                 ERRORS : 1                                      **
+                                                                                                                     *************************************************************************************
+                                                                                                                     **                               SIM TIME : 4.00 NS                                **
+                                                                                                                     **                              REAL TIME : 0.09 S                                 **
+                                                                                                                     **                        SIM / REAL TIME : 45.49 NS/S                             **
+                                                                                                                     *************************************************************************************
+                                                                                                                     
+     4.00ns INFO     cocotb.regression                         regression.py:255  in tear_down                       Shutting down...
+make[1]: Leaving directory '/home/divya/Downloads/cocotb-master/examples/adder/tests'
