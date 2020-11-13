@@ -23,6 +23,8 @@ async def adder_basic_test(dut):
     dut.B <= B
 
     await Timer(2, units='ns')
+    c=adder_model(A, B)
+    print(" directed test :c :",c,"dut.X.value: ",dut.X.value )
 
     assert dut.X.value == adder_model(A, B), "Adder result is incorrect: {} != 15".format(dut.X.value)
 
@@ -31,64 +33,75 @@ async def adder_basic_test(dut):
 async def adder_randomised_test(dut):
     """Test for adding 2 random numbers multiple times"""
 
-    for i in range(100):
+    list_1 = set()
+    list_2 = set()
+    n = 16
+    i = 0
 
-        A = random.choice(range(0,15))
-        B = random.choice(range(0,15))
+    while i < n:
+        a = random.randint(0,15)
+        b = random.randint(0,15)
+        if a not in list_1 and b not in list_2 :
+            i += 1
+            A =a
+            B =b
+            dut.A <= A
+            dut.B <= B
+            list_1.add(A)
+            list_2.add(B)
 
-        dut.A <= A
-        dut.B <= B
+            await Timer(2, units='ns')
+            c=adder_model(A, B)
+            print("c :",c,"dut.X.value: ",dut.X.value )
+            assert dut.X.value == adder_model(A, B), "Randomised test failed with: {A} + {B} = {X}".format(
+                                A=dut.A.value, B=dut.B.value, X=dut.X.value)
 
-        await Timer(2, units='ns')
+            #def test_simple_coverpoint(self):
 
-        assert dut.X.value == adder_model(A, B), "Randomised test failed with: {A} + {B} = {X}".format(
-            A=dut.A.value, B=dut.B.value, X=dut.X.value)
+            @covergroup
+            class my_covergroup(object):
 
-        #def test_simple_coverpoint(self):
+                 def __init__(self, a, b): # Need to use lambda for non-reference values
+                     super().__init__()
 
-        @covergroup
-        class my_covergroup(object):
+                     self.cp1 = coverpoint(a,
+                         bins=dict(
+                             a = bin_array([], [0,15])
+                         ))
 
-             def __init__(self, a, b): # Need to use lambda for non-reference values
-                 super().__init__()
-
-                 self.cp1 = coverpoint(a,
-                     bins=dict(
-                         a = bin_array([], [1,15])
-                     ))
-
-                 self.cp2 = coverpoint(b, bins=dict(
-                     b = bin_array([], [1,15])
-                     ))
+                     self.cp2 = coverpoint(b, bins=dict(
+                         b = bin_array([], [0,15])
+                         ))
 
 
-        a = 0;
-        b = 0;
+            #a = 0;
+            #b = 0;
 
-        cg = my_covergroup(lambda:a, lambda:b)
+            cg = my_covergroup(lambda:a, lambda:b)
 
-        a=dut.A
-        b=dut.B
-        cg.sample() # Hit the first bin of cp1 and cp2  
+            a=dut.A
+            b=dut.B
+            print("A: ",a," B: ",b)
+            cg.sample() # Hit the first bin of cp1 and cp2  
 
-        
-        report = vsc.get_coverage_report()
-        print("Report:\n" + report)
-        out = StringIO()
-        vsc.write_coverage_db("cov.xml")
-        # print(">================== Write XML ========================")
-        vsc.write_coverage_db(out)
-        #print("<================== Write XML ========================")
-        db = XmlFactory.read(out)
-        #print(">================== Build Report =====================")
-        report = CoverageReportBuilder.build(db)
-        #print("<================== Build Report =====================")
-        #print(">================== Text Reporter ====================")
-        reporter = TextCoverageReportFormatter(report, sys.stdout)
-        #print("<================== Text Reporter ====================")
-        reporter.details = True
-        #print(">================== XML Report =======================")
-        reporter.report()
-        # print("<================== XML Report =======================")
+            
+            report = vsc.get_coverage_report()
+            print("Report:\n" + report)
+            out = StringIO()
+            vsc.write_coverage_db("cov.xml")
+            # print(">================== Write XML ========================")
+            vsc.write_coverage_db(out)
+            #print("<================== Write XML ========================")
+            db = XmlFactory.read(out)
+            #print(">================== Build Report =====================")
+            report = CoverageReportBuilder.build(db)
+            #print("<================== Build Report =====================")
+            #print(">================== Text Reporter ====================")
+            reporter = TextCoverageReportFormatter(report, sys.stdout)
+            #print("<================== Text Reporter ====================")
+            reporter.details = True
+            #print(">================== XML Report =======================")
+            reporter.report()
+            # print("<================== XML Report =======================")
                
                
