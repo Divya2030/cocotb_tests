@@ -12,6 +12,15 @@ import unittest
 from unittest.case import TestCase
 from vsc import *
 
+from _io import StringIO
+import sys
+
+from ucis.report import coverage_report_builder
+from ucis.report.coverage_report_builder import CoverageReportBuilder
+from ucis.report.text_coverage_report_formatter import TextCoverageReportFormatter
+from ucis.xml.xml_factory import XmlFactory
+from vsc.coverage import bin_array
+
 @cocotb.test()
 async def adder_basic_test(dut):
     """Test for 5 + 10"""
