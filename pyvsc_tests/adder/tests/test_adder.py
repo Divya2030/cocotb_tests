@@ -54,11 +54,17 @@ class my_covergroup(object):
              b = bin_array([], [0,15])
              ))
 
+@covergroup
+class my_cg(object):
+     def __init__(self):
+            self.with_sample(dict( a=vsc.uint8_t(),b=vsc.uint8_t()))
+            self.cp1 = vsc.coverpoint(self.a, iff=(self.b == 9), bins={ 
+                    "a" : vsc.bin_array([], [0,15]), 
+                    "b" : vsc.bin_array([], [0,15])})        
 
-#a = 0;
-#b = 0;
 
 cg = my_covergroup()
+cg_if_a_1 = my_cg()
 
 @cocotb.test()
 async def adder_randomised_test(dut):
@@ -87,13 +93,15 @@ async def adder_randomised_test(dut):
             assert dut.X.value == adder_model(A, B), "Randomised test failed with: {A} + {B} = {X}".format(
                                 A=dut.A.value, B=dut.B.value, X=dut.X.value)
 
-            #def test_simple_coverpoint(self):
 
 
             cg.a=dut.A
             cg.b=dut.B
             print("A: ",a," B: ",b)
             cg.sample() # Hit the first bin of cp1 and cp2  
+
+
+            cg_if_a_1.sample(dut.A,dut.B)  #####COVERAGE IF B=9
 
             
             report = vsc.get_coverage_report()
