@@ -53,6 +53,9 @@ class my_covergroup(object):
          self.cp2 = coverpoint(lambda :self.b, bins=dict(
              b = bin_array([], [0,15])
              ))
+         self.cp3 = vsc.coverpoint(lambda :self.a, iff=(lambda :self.b == 9), bins={ 
+                    "a" : vsc.bin_array([], [0,15]), 
+                    "b" : vsc.bin_array([], [0,15])}) 
 
 @covergroup
 class my_cg(object):
