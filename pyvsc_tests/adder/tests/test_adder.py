@@ -37,6 +37,28 @@ async def adder_basic_test(dut):
 
     assert dut.X.value == adder_model(A, B), "Adder result is incorrect: {} != 15".format(dut.X.value)
 
+@covergroup
+class my_covergroup(object):
+
+     def __init__(self): # Need to use lambda for non-reference values
+         super().__init__()
+         self.a = None
+         self.b = None
+
+         self.cp1 = coverpoint(lambda :self.a,
+             bins=dict(
+                 a = bin_array([], [0,15])
+             ))
+
+         self.cp2 = coverpoint(lambda :self.b, bins=dict(
+             b = bin_array([], [0,15])
+             ))
+
+
+#a = 0;
+#b = 0;
+
+cg = my_covergroup()
 
 @cocotb.test()
 async def adder_randomised_test(dut):
@@ -67,29 +89,9 @@ async def adder_randomised_test(dut):
 
             #def test_simple_coverpoint(self):
 
-            @covergroup
-            class my_covergroup(object):
 
-                 def __init__(self, a, b): # Need to use lambda for non-reference values
-                     super().__init__()
-
-                     self.cp1 = coverpoint(a,
-                         bins=dict(
-                             a = bin_array([], [0,15])
-                         ))
-
-                     self.cp2 = coverpoint(b, bins=dict(
-                         b = bin_array([], [0,15])
-                         ))
-
-
-            #a = 0;
-            #b = 0;
-
-            cg = my_covergroup(lambda:a, lambda:b)
-
-            a=dut.A
-            b=dut.B
+            cg.a=dut.A
+            cg.b=dut.B
             print("A: ",a," B: ",b)
             cg.sample() # Hit the first bin of cp1 and cp2  
 
